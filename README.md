@@ -11,6 +11,8 @@ Features include:
 * Nice selection of freely redistributable fonts.
 * Dark theme support
 
+## Example screenshots
+
 ![Light mode example](example-article.png)
 
 ![As seen on mobile device](example-mobile.png)
