@@ -1,0 +1,210 @@
+/* eluhgunt.css. Designed to be a nice-looking CSS stylesheet for writing
+   essays with. See <http://soulsphere.org/apocrypha/eluhgunt.html> for some
+   demos.
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond|Signika|Source+Code+Pro&display=block");
+
+/* page should have proper margins. */
+body {
+  background-color: white;
+  margin-top: 2em;
+  margin-bottom: 4em;
+
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  /* we always want at least a little bit of horizontal margins: */
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+
+  font-family: 'EB Garamond', 'Calisto MT', 'Palatino', serif;
+  font-size: large;
+  color: #555;
+  line-height: 1.6;
+
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+/* Bold text appears slightly darker as additional emphasis. */
+b {
+  color: black;
+}
+
+/** Headings **/
+h1 {
+  margin-left: -5px;
+  margin-right: -5px;
+  font-family: 'Cinzel', 'Constantia', serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: #333;
+  line-height: 1;
+}
+
+h2,h3,h4,h5 {
+  font-family: 'Signika', 'Corbel', sans-serif;
+  font-weight: bold;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+
+/* <p> adds some margin to separate it from the previous paragraph. */
+p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/* We give some nice-looking margins around certain elements. */
+ol,ul,pre,blockquote,.illustration {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+/* Numbered and bullet point lists */
+ul {
+  list-style-type: disc;
+}
+ol,ul {
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 36px;
+}
+li {
+  margin-bottom: 0.3em;
+}
+/* "fancy" horizontal rule that only takes up a third of the page */
+hr {
+  border-color: #999;
+  border-style: dashed;
+  border-bottom: none;
+  width: 33%;
+  margin-left: 33%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* For quotations, we indent with a line to the left. */
+blockquote {
+  border-left: 2px solid #444;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+/* for "illustrations" (images and video iframes), display as block
+   and center on page */
+.illustration {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* youtube video */
+iframe.illustration {
+  width: 32em;
+  height: 24em;
+}
+
+pre,tt {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+}
+
+/* embedded text files need to be readable within the overall page, so
+   we use a small font */
+pre {
+  padding-left: 10px;
+  width: auto;
+  background-color: #e5e5e5;
+  color: #222;
+  font-size: 10px;
+}
+
+/* Links look more subtle than usual */
+a {
+  color: #333;
+  text-decoration: underline;
+  text-underline-offset: 15%;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+a:hover {
+  color: black;
+  text-decoration-color: rgba(0, 0, 0, 1.0);
+}
+
+/* Tables */
+table {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 32px;
+  margin-right: 16px;
+  border-collapse: collapse;
+  max-width: 100%;
+  border: 1px solid #e0e0e0;
+}
+tr {
+  background-color: white;
+}
+tr:nth-child(odd) {
+  background-color: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+th {
+  font-family: 'Signika', sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+th,td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+i,em {
+  font-family: 'EB Garamond Italic', 'Calisto MT Italic', serif;
+  font-style: italic;
+}
+
+/* For dark mode we make some subtle tweaks. While we don't switch to a
+ * dark background, we at least tone down the white background. */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #c5beb7;
+    color: #333;
+  }
+  pre {
+    background-color: #bbb3aa;
+  }
+  table {
+    border: 1px solid #a0a0a0;
+  }
+  tr {
+    background-color: #c0bab2;
+  }
+  tr:nth-child(odd) {
+    background-color: #bbb3aa;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+  }
+}
+
